@@ -111,6 +111,9 @@
   (("s-M-p" . move-text-up)
    ("s-M-n" . move-text-down)))
 
+(use-package amx)
+(amx-mode)
+
 (use-package ivy
   :ensure swiper
   :bind
