@@ -202,6 +202,8 @@
 (setq-default c-default-style "Google")
 
 (add-hook 'c-mode-hook (lambda () (c-set-style "airties")))
+(add-hook 'c++-mode-hook (lambda () (setq comment-start "/* "
+                                          comment-end   " */")))
 
 (add-hook 'LaTeX-mode-hook 'flyspell-mode)
 
