@@ -147,6 +147,10 @@
   ((org-mode . turn-on-auto-fill)
    (org-mode . (lambda () (set-fill-column 120)))))
 
+(custom-set-variables
+ '(ediff-window-setup-function 'ediff-setup-windows-plain) ;; is this needed?
+ '(ediff-diff-options "-w")
+ '(ediff-split-window-function 'split-window-horizontally))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;; coding style ;;;;;;;;;;;;;;;;
