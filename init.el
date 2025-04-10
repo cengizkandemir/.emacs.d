@@ -151,6 +151,8 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;; coding style ;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(use-package bazel)
+
 (defun enable-electric-pair-local-mode ()
   "Enable electric pair mode locally."
   (electric-pair-local-mode 1))
