@@ -11,8 +11,8 @@
         ("MELPA Stable" . "https://stable.melpa.org/packages/")
         ("MELPA"        . "https://melpa.org/packages/"))
       package-archive-priorities
-      '(("GNU ELPA"     . 10)
-        ("MELPA"        . 5)
+      '(("GNU ELPA"     . 5)
+        ("MELPA"        . 10)
         ("MELPA Stable" . 0)))
 
 (package-initialize)
@@ -64,6 +64,8 @@
 ;;;;;;;;;;;;;;;;;;;; misc ;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (use-package restart-emacs)
+
+(setq package-install-upgrade-built-in t)
 
 (defun kill-all-buffers ()
   (interactive)
