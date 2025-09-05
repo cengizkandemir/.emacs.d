@@ -13,8 +13,8 @@
         ("MELPA Stable" . "https://stable.melpa.org/packages/")
         ("MELPA"        . "https://melpa.org/packages/"))
       package-archive-priorities
-      '(("GNU ELPA"     . 10)
-        ("MELPA"        . 5)
+      '(("GNU ELPA"     . 5)
+        ("MELPA"        . 10)
         ("MELPA Stable" . 0)))
 
 (package-initialize)
@@ -70,6 +70,8 @@
 ;; this fixes spdlog color output causing issues in compilation buffer
 (use-package ansi-color
     :hook (compilation-filter . ansi-color-compilation-filter))
+
+(setq package-install-upgrade-built-in t)
 
 (defun kill-all-buffers ()
   (interactive)
