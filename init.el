@@ -6,6 +6,8 @@
 ;;; Code:
 (require 'package)
 
+(add-to-list 'load-path "~/.emacs.d/lisp/")
+
 (setq package-archives
       '(("GNU ELPA"     . "https://elpa.gnu.org/packages/")
         ("MELPA Stable" . "https://stable.melpa.org/packages/")
@@ -152,6 +154,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;; coding style ;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(require 'google-c-style)
 (defun enable-electric-pair-local-mode ()
   "Enable electric pair mode locally."
   (electric-pair-local-mode 1))
@@ -194,7 +197,9 @@
                (indent-tabs-mode . nil)
                (c-offsets-alist . ((innamespace . +)))))
 
-(setq-default c-default-style "ck")
+(add-hook 'c-mode-common-hook 'google-set-c-style)
+
+(setq-default c-default-style "Google")
 
 (add-hook 'c-mode-hook (lambda () (c-set-style "airties")))
 
