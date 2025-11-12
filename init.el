@@ -65,6 +65,10 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (use-package restart-emacs)
 
+;; this fixes spdlog color output causing issues in compilation buffer
+(use-package ansi-color
+    :hook (compilation-filter . ansi-color-compilation-filter))
+
 (defun kill-all-buffers ()
   (interactive)
   (mapc 'kill-buffer (buffer-list)))
